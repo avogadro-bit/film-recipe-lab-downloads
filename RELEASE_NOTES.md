@@ -1,14 +1,23 @@
-# Film Recipe Lab 0.2.3 — public beta
+# Film Recipe Lab 0.2.7 — public beta
 
-First public beta for Apple Silicon Macs running macOS 14 or later.
+For Apple Silicon Macs running macOS 14 or later.
 
-- ZIP and extracted-folder import for the official GFX ETERNA 55 v1.10 LUTs.
-- Leica Q3 43 DNG color handling works without ExifTool.
-- Local RAW editing, film looks, multi-photo adjustments and batch JPEG export.
-- Included third-party license texts, version inventory and matching native
-  dependency source archives.
+Changes since public beta 0.2.3:
 
-Download **Film-Recipe-Lab-0.2.3-macOS-arm64.dmg** to install the app. The ZIP is
+- Proper macOS reopen handling from Finder or the Dock, and clean shutdown on Quit.
+- Expandable folder tree, selected-folder path, and optional subfolder inclusion.
+- All photos accessible in the carousel, with thumbnails loaded as they become visible.
+- Detection of standard Homebrew and MacPorts ExifTool installations without a
+  Terminal PATH. ExifTool remains optional and is not bundled.
+- Leica DNG distortion correction calculated for requested detail regions instead
+  of correcting the entire full-resolution frame before showing a tile.
+- Superseded viewport requests rejected before further expensive work; detail
+  tiles nearest the viewport center are prioritized.
+- Connection warnings tolerate isolated delays and distinguish slow responses
+  from expired sessions. Checking the connection no longer reloads the editor.
+- Smaller top and bottom bars leave more room for the image; panels remain resizable.
+
+Download **Film-Recipe-Lab-0.2.7-macOS-arm64.dmg** to install the app. The ZIP is
 an alternative packaging of the same application. The two dependency archives
 are provided for license/source information and are not required to run the app.
 
@@ -18,5 +27,7 @@ the previous application before replacing it; installed LUTs are preserved.
 This is an evaluation beta, not an exact reproduction of Fujifilm camera output.
 Camera support and processing performance vary. Not Apple-notarized.
 
-The preceding 0.2.2 application passed 148 local tests; this release adds distribution
-notices and packaging assets. See the README for features, limits and feedback.
+The first full-resolution zoom still requires RAW decoding and can take several
+seconds on large files. Subsequent regions use the decoded buffer and tile cache.
+Regional Leica correction was checked against full-frame output. 164 Python tests
+and the JavaScript connection-state checks pass locally. See the README for details.

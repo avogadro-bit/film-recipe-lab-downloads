@@ -3,7 +3,7 @@
 A local RAW photo editor for exploring film-inspired looks, with individual and
 group adjustments, source-resolution detail, and JPEG/TIFF export.
 
-**[Download the macOS beta](https://github.com/avogadro-bit/film-recipe-lab-downloads/releases/tag/v0.2.3)**
+**[Download the macOS beta](https://github.com/avogadro-bit/film-recipe-lab-downloads/releases/tag/v0.2.7)**
 
 **Requirements:** Apple Silicon Mac (M1 or newer), macOS 14 or later.
 Python is included. This beta is not Apple-notarized. No Windows or Intel Mac
@@ -11,7 +11,7 @@ executable is available in this release.
 
 ## Start editing
 
-1. Download `Film-Recipe-Lab-0.2.3-macOS-arm64.dmg` from the release assets.
+1. Download `Film-Recipe-Lab-0.2.7-macOS-arm64.dmg` from the release assets.
 2. Copy Film Recipe Lab to Applications and launch it. The editor opens in your
    default browser and runs on your computer.
 3. In **Setup**, follow **Download from Fujifilm** to obtain the official
@@ -35,6 +35,7 @@ Original photo files are read in place; exports are separate files.
 - Exposure, highlights, whites, shadows, blacks, white balance, color and grain.
 - Multi-photo selection, shared adjustments and batch JPEG export.
 - Zoomable preview and source-resolution detail; lens corrections where supported.
+- Expandable folder tree and compact, resizable viewer panels.
 
 ## Beta limitations
 
@@ -46,6 +47,8 @@ claim X100VI calibration. Large RAW files can still take time to process.
 
 ExifTool is optional and is not bundled. Without it, some shooting metadata and
 lens profiles are unavailable; basic DNG camera identification works without it.
+Standard Homebrew and MacPorts ExifTool installations are detected even when
+the app is launched from Finder or the Dock.
 Adobe RGB export depends on an available macOS system profile; sRGB is the
 portable choice. Please treat this as software for evaluation and report issues.
 
