@@ -3,6 +3,8 @@
 A local RAW photo editor for exploring film-inspired looks, with individual and
 group adjustments, source-resolution detail, and JPEG/TIFF export.
 
+This project is developed with the help of AI coding tools.
+
 **[Download the macOS beta](https://github.com/avogadro-bit/film-recipe-lab-downloads/releases/tag/v0.2.7)**
 
 **Requirements:** Apple Silicon Mac (M1 or newer), macOS 14 or later.
